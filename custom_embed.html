@@ -10,22 +10,23 @@
             position: relative;
             width: 100%;
             height: 100vh;
-            overflow: hidden; /* Ensures no scrolling within the container */
+            overflow: hidden;
             margin: 0;
             padding: 0;
+            background-color: #000; /* Match this to your app's background color */
         }
 
         /* Adjust iframe positioning to fully fit content and hide all scrolling */
         iframe {
             position: absolute;
             top: -30px; /* Adjust to control the top cropping */
-            left: -8px; /* Shift further left to remove extra space */
-            width: calc(100% + 20px); /* Increase width slightly more to remove right scrollbar */
-            height: calc(100% + 105px); /* Extend height slightly more to remove footer */
+            left: 0; /* Set to 0 to eliminate any shift */
+            width: 100%; /* Set to 100% to fit the container exactly */
+            height: calc(100% + 100px); /* Extend height to fully remove footer */
             border: none;
             overflow: hidden; /* Prevent any internal scrolling */
             scrollbar-width: none; /* Hide scrollbar in Firefox */
-            pointer-events: none; /* Prevents scrolling and interaction within the iframe */
+            background-color: #000; /* Match this to your app's background color */
         }
 
         /* Hide scrollbar for iframe in WebKit browsers like Chrome, Safari */
