@@ -13,12 +13,12 @@
             overflow: hidden;
         }
 
-        /* Adjust iframe positioning to show column headers and hide unwanted elements */
+        /* Adjust iframe positioning to show column headers, hide vertical line, and remove unwanted elements */
         iframe {
             position: absolute;
-            top: -30px; /* Adjusted to show the headers */
-            left: 0;
-            width: calc(100% - 2px); /* Adjust width to prevent overflow of gray border */
+            top: -30px;  /* Adjusted to show the headers */
+            left: -1px;  /* Shift slightly left to hide the vertical line */
+            width: calc(100% + 1px); /* Adjust width to avoid gray border overflow */
             height: calc(100% + 30px); /* Extend height to compensate for the shift */
             border: none;
         }
