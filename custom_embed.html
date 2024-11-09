@@ -13,16 +13,16 @@
             overflow: hidden; /* Ensures no scrolling within the container */
             margin: 0;
             padding: 0;
-            background-color: black; /* Set background to black to blend with Glide's theme */
+            background-color: black; /* Set background to black to match app theme */
         }
 
         /* Adjust iframe positioning to fully fit content and hide all scrolling */
         iframe {
             position: absolute;
-            top: -30px; /* Adjust to control the top cropping */
-            left: -10px; /* Shift further left to remove any remaining white border */
-            width: calc(100% + 25px); /* Increase width more to remove right border */
-            height: calc(100% + 105px); /* Adjust height to fully remove footer */
+            top: -30px; /* Controls the top cropping */
+            left: -12px; /* Shifts further left to avoid cutting off text */
+            width: calc(100% + 30px); /* Increase width to remove the right sliver */
+            height: calc(100% + 105px); /* Extend height slightly to remove any bottom space */
             border: none;
             overflow: hidden; /* Prevent any internal scrolling */
             scrollbar-width: none; /* Hide scrollbar in Firefox */
