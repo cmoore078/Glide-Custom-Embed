@@ -20,12 +20,13 @@
         iframe {
             position: absolute;
             top: -30px; /* Controls the top cropping */
-            left: -14px; /* Shifts further left to avoid cutting off text */
-            width: calc(100% + 35px); /* Increase width slightly more to cover the right sliver */
+            left: -18px; /* Shifts further left to completely avoid cutting off text */
+            width: calc(100% + 40px); /* Overextend width to fully cover the right side */
             height: calc(100% + 105px); /* Extend height slightly to remove any bottom space */
             border: none;
             overflow: hidden; /* Prevent any internal scrolling */
             scrollbar-width: none; /* Hide scrollbar in Firefox */
+            background-color: black; /* Fallback to ensure no white appears */
             pointer-events: none; /* Prevents scrolling and interaction within the iframe */
         }
 
