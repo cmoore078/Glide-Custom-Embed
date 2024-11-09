@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Google Sheet Embed</title>
+    <style>
+        /* CSS to hide the Google footer */
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+
+        /* Hide Google Sheets footer */
+        .google-footer-bar,
+        .docs-titlebar-badge {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRSzAAFCBHBEdCoCJVTx2TIzad5rsuRj7TIa4UToARd80kD0Va0qGNmnuMqCjJmrPJginycYeZnTasa/pubhtml?gid=0&single=true"></iframe>
+</body>
+</html>
