@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Google Sheet Embed</title>
     <style>
-        /* Container to crop the top and bottom, eliminating borders and extra space */
+        /* Container to eliminate borders and extra space */
         .iframe-container {
             position: relative;
             width: 100%;
@@ -16,29 +16,23 @@
             background-color: black; /* Set background to black to match app theme */
         }
 
-        /* Adjust iframe positioning to fully fit content and hide all scrolling */
-        iframe {
+        /* Inner div to act as the content without iframe quirks */
+        .content-div {
             position: absolute;
             top: -30px; /* Controls the top cropping */
-            left: -18px; /* Shifts further left to completely avoid cutting off text */
-            width: calc(100% + 40px); /* Overextend width to fully cover the right side */
-            height: calc(100% + 105px); /* Extend height slightly to remove any bottom space */
-            border: none;
-            overflow: hidden; /* Prevent any internal scrolling */
-            scrollbar-width: none; /* Hide scrollbar in Firefox */
-            background-color: black; /* Fallback to ensure no white appears */
-            pointer-events: none; /* Prevents scrolling and interaction within the iframe */
-        }
-
-        /* Hide scrollbar for iframe in WebKit browsers like Chrome, Safari */
-        iframe::-webkit-scrollbar {
-            display: none;
+            left: -20px; /* Shift left to ensure no white edge */
+            width: calc(100% + 50px); /* Extend width to cover right side */
+            height: calc(100% + 120px); /* Extend height to cover bottom */
+            background-image: url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRSzAAFCBHBEdCoCJVTx2TIzad5rsuRj7TIa4UToARd80kD0Va0qGNmnuMqCjJmrPJginycYeZnTasa/pubhtml?gid=0&single=true");
+            background-size: cover; /* Ensures the content fills the div */
+            background-position: center; /* Center content */
+            background-repeat: no-repeat;
         }
     </style>
 </head>
 <body style="margin: 0; padding: 0; overflow: hidden;">
     <div class="iframe-container">
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRSzAAFCBHBEdCoCJVTx2TIzad5rsuRj7TIa4UToARd80kD0Va0qGNmnuMqCjJmrPJginycYeZnTasa/pubhtml?gid=0&single=true"></iframe>
+        <div class="content-div"></div>
     </div>
 </body>
 </html>
