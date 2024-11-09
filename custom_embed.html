@@ -15,15 +15,21 @@
             padding: 0;
         }
 
-        /* Adjust iframe positioning to fully fit content and hide scrolling */
+        /* Adjust iframe positioning to fully fit content and hide all scrolling */
         iframe {
             position: absolute;
             top: -30px; /* Adjust to control the top cropping */
             left: -5px; /* Shift further left to remove extra space */
-            width: calc(100% + 10px); /* Increase width slightly to remove horizontal scroll */
-            height: calc(100% + 80px); /* Extend height to crop bottom and avoid footer */
+            width: calc(100% + 15px); /* Increase width slightly more to remove right scrollbar */
+            height: calc(100% + 100px); /* Extend height to fully remove footer and prevent vertical scroll */
             border: none;
-            overflow: hidden;
+            overflow: hidden; /* Prevent any internal scrolling */
+            scrollbar-width: none; /* Hide scrollbar in Firefox */
+        }
+
+        /* Hide scrollbar for iframe in WebKit browsers like Chrome, Safari */
+        iframe::-webkit-scrollbar {
+            display: none;
         }
     </style>
 </head>
