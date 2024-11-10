@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Sheets Chart</title>
     <style>
-        /* Remove borders from iframe and container */
+        /* Remove margins, padding, and overflow */
         html, body {
             margin: 0;
             padding: 0;
@@ -20,17 +20,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden; /* Prevents any overflow */
         }
         iframe {
             border: none;
             box-shadow: none;
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            overflow: hidden; /* Prevents scroll bars */
         }
     </style>
 </head>
 <body>
     <div class="chart-container">
         <!-- Google Sheets Chart Embedded in an Iframe -->
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCgt44hHr3OdmU7AApgYyKZsgK5vCvjxOZFif2NwdM-MlsuJLHjbDwCRIxZQZpbL83plr7Dwow08Sn/pubchart?oid=1234130975&format=interactive" width="100%" height="100%"></iframe>
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCgt44hHr3OdmU7AApgYyKZsgK5vCvjxOZFif2NwdM-MlsuJLHjbDwCRIxZQZpbL83plr7Dwow08Sn/pubchart?oid=1234130975&format=interactive" frameborder="0"></iframe>
     </div>
 </body>
 </html>
