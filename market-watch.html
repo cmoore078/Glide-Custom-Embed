@@ -1,66 +1,96 @@
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-    <div class="tradingview-widget-container__widget"></div>
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
-    {
-        "colorTheme": "dark",
-        "dateRange": "12M",
-        "showChart": true,
-        "locale": "en",
-        "isTransparent": false,
-        "width": "400",
-        "height": "550",
-        "showSymbolLogo": false,
-        "showFloatingTooltip": false,
-        "plotLineColorGrowing": "rgba(57, 168, 200, 1)",
-        "plotLineColorFalling": "rgba(255, 0, 0, 1)",
-        "gridLineColor": "rgba(0, 0, 0, 0)",  /* Makes grid lines invisible */
-        "scaleFontColor": "rgba(255, 255, 255, 1)", /* White text for scales */
-        "belowLineFillColorGrowing": "rgba(0, 0, 0, 0.7)", /* Darker background fill */
-        "belowLineFillColorFalling": "rgba(0, 0, 0, 0.7)", /* Darker background fill */
-        "belowLineFillColorGrowingBottom": "rgba(0, 0, 0, 0.7)",
-        "belowLineFillColorFallingBottom": "rgba(0, 0, 0, 0.7)",
-        "symbolActiveColor": "rgba(57, 168, 200, 1)",
-        "backgroundColor": "rgba(0, 0, 0, 1)",  /* Deep black background */
-        "tabs": [
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradingView Market Overview</title>
+    <style>
+        /* Remove margins, padding, and overflow */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: #000; /* Optional: set a background color */
+        }
+        .widget-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="widget-container">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
             {
-                "title": "Indices",
-                "symbols": [
-                    { "s": "CME:BTC1!" },
-                    { "s": "COINBASE:BTCUSD" },
-                    { "s": "AMEX:BITI" },
-                    { "s": "AMEX:BITU" },
-                    { "s": "NASDAQ:WGMI" },
-                    { "s": "NASDAQ:IBIT" },
-                    { "s": "NASDAQ:BITF" },
-                    { "s": "NASDAQ:BTBT" },
-                    { "s": "NASDAQ:HIVE" },
-                    { "s": "NASDAQ:BTDR" },
-                    { "s": "NASDAQ:WULF" },
-                    { "s": "NASDAQ:CIFR" },
-                    { "s": "NASDAQ:APLD" },
-                    { "s": "NASDAQ:IREN" },
-                    { "s": "NASDAQ:RIOT" },
-                    { "s": "NASDAQ:CLSK" },
-                    { "s": "NASDAQ:CORZ" },
-                    { "s": "NASDAQ:HUT" },
-                    { "s": "NASDAQ:MARA" },
-                    { "s": "NASDAQ:MSTR" },
-                    { "s": "NASDAQ:COIN" }
-                ],
-                "originalTitle": "Indices"
-            },
-            {
-                "title": "Futures",
-                "symbols": [
-                    { "s": "CME_MINI:ES1!", "d": "S&P 500" },
-                    { "s": "COMEX:GC1!", "d": "Gold" },
-                    { "s": "NYMEX:CL1!", "d": "WTI Crude Oil" }
-                ],
-                "originalTitle": "Futures"
+                "colorTheme": "light",
+                "dateRange": "3M",
+                "showChart": true,
+                "locale": "en",
+                "largeChartUrl": "",
+                "isTransparent": true,
+                "showSymbolLogo": true,
+                "showFloatingTooltip": false,
+                "width": "400",
+                "height": "550",
+                "plotLineColorGrowing": "rgba(68, 200, 197, 1)",
+                "plotLineColorFalling": "rgba(255, 0, 0, 1)",
+                "gridLineColor": "rgba(42, 46, 57, 0)",
+                "scaleFontColor": "rgba(19, 23, 34, 0)",
+                "belowLineFillColorGrowing": "rgba(57, 168, 200, 0.4)",
+                "belowLineFillColorFalling": "rgba(255, 0, 0, 0.49)",
+                "belowLineFillColorGrowingBottom": "rgba(0, 0, 0, 0)",
+                "belowLineFillColorFallingBottom": "rgba(0, 0, 0, 0)",
+                "symbolActiveColor": "rgba(68, 200, 197, 1)",
+                "tabs": [
+                    {
+                        "title": "Indices",
+                        "symbols": [
+                            { "s": "CME:BTC1!" },
+                            { "s": "COINBASE:BTCUSD" },
+                            { "s": "AMEX:BITI" },
+                            { "s": "AMEX:BITU" },
+                            { "s": "NASDAQ:WGMI" },
+                            { "s": "NASDAQ:IBIT" },
+                            { "s": "NASDAQ:BITF" },
+                            { "s": "NASDAQ:BTBT" },
+                            { "s": "NASDAQ:HIVE" },
+                            { "s": "NASDAQ:BTDR" },
+                            { "s": "NASDAQ:WULF" },
+                            { "s": "NASDAQ:CIFR" },
+                            { "s": "NASDAQ:APLD" },
+                            { "s": "NASDAQ:IREN" },
+                            { "s": "NASDAQ:RIOT" },
+                            { "s": "NASDAQ:CLSK" },
+                            { "s": "NASDAQ:CORZ" },
+                            { "s": "NASDAQ:HUT" },
+                            { "s": "NASDAQ:MARA" },
+                            { "s": "NASDAQ:MSTR" },
+                            { "s": "NASDAQ:COIN" }
+                        ],
+                        "originalTitle": "Indices"
+                    },
+                    {
+                        "title": "Futures",
+                        "symbols": [
+                            { "s": "CME_MINI:ES1!", "d": "S&P 500" },
+                            { "s": "COMEX:GC1!", "d": "Gold" },
+                            { "s": "NYMEX:CL1!", "d": "WTI Crude Oil" }
+                        ],
+                        "originalTitle": "Futures"
+                    }
+                ]
             }
-        ]
-    }
-    </script>
-</div>
-<!-- TradingView Widget END -->
+            </script>
+        </div>
+        <!-- TradingView Widget END -->
+    </div>
+</body>
+</html>
