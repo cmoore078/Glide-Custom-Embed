@@ -12,7 +12,7 @@
         .tradingview-widget-container {
             width: 400px;
             height: 600px;
-            background-color: #000; /* Force black background for the widget container */
+            background-color: #000; /* Black background limited to widget container */
         }
     </style>
 </head>
@@ -27,6 +27,7 @@
             "showChart": false,
             "locale": "en",
             "largeChartUrl": "",
+            "isTransparent": true, /* Keep the widget transparent to avoid blue tint */
             "showSymbolLogo": true,
             "showFloatingTooltip": false,
             "width": "400",
