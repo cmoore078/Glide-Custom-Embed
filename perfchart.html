@@ -25,9 +25,10 @@
         iframe {
             border: none;
             box-shadow: none;
-            width: 100vw; /* Full viewport width */
-            height: 100vh; /* Full viewport height */
-            overflow: hidden; /* Disallow scroll bars */
+            width: 90vw; /* Scale iframe width to fit inside viewport */
+            height: 90vh; /* Scale iframe height to fit inside viewport */
+            transform: scale(0.9); /* Adjust scale to fit content */
+            transform-origin: top left; /* Anchor scaling to the top-left corner */
         }
     </style>
 </head>
