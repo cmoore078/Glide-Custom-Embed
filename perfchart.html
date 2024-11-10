@@ -3,35 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Google Sheets Chart</title>
+    <title>Google Sheets Chart</title>
     <style>
-        /* Remove margins and padding */
+        /* Remove margins, padding, and overflow */
         html, body {
             margin: 0;
             padding: 0;
             height: 100%;
             width: 100%;
-            background-color: #000; /* Match app background */
+            overflow: hidden; /* Disallow scroll bars */
+            background-color: #000; /* Background color to match your app */
+        }
+        .chart-container {
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-        }
-        /* Aspect ratio box */
-        .chart-container {
-            width: 100%;
-            max-width: 400px; /* Limit to typical phone width */
-            height: 0;
-            padding-bottom: 75%; /* Adjust aspect ratio to fit Glide's screen */
-            position: relative;
+            overflow: hidden; /* Disallow scroll bars */
         }
         iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
             border: none;
+            box-shadow: none;
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            overflow: hidden; /* Disallow scroll bars */
         }
     </style>
 </head>
