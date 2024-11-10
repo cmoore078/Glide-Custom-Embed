@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TradingView Market Overview</title>
     <style>
-        /* Minimal styling, no background color */
         body {
             margin: 0;
             padding: 0;
@@ -13,6 +12,7 @@
         .tradingview-widget-container {
             width: 400px;
             height: 600px;
+            background-color: #000; /* Force black background for the widget container */
         }
     </style>
 </head>
@@ -27,7 +27,6 @@
             "showChart": false,
             "locale": "en",
             "largeChartUrl": "",
-            "isTransparent": false, /* Set to false to keep the dark background */
             "showSymbolLogo": true,
             "showFloatingTooltip": false,
             "width": "400",
