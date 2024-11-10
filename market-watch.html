@@ -8,11 +8,12 @@
         body {
             margin: 0;
             padding: 0;
+            background-color: #000; /* Ensure the background is black around the widget */
         }
         .tradingview-widget-container {
             width: 400px;
             height: 600px;
-            background-color: #000; /* Black background limited to widget container */
+            background-color: #000; /* Black background in container */
         }
     </style>
 </head>
@@ -27,7 +28,7 @@
             "showChart": false,
             "locale": "en",
             "largeChartUrl": "",
-            "isTransparent": true, /* Keep the widget transparent to avoid blue tint */
+            "isTransparent": false, /* Disable transparency */
             "showSymbolLogo": true,
             "showFloatingTooltip": false,
             "width": "400",
