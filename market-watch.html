@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TradingView Market Overview</title>
     <style>
-        /* Set specific dimensions and remove any extra styling */
+        /* Ensure widget container is black, allowing transparency within the widget */
         body {
             margin: 0;
             padding: 0;
-            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000; /* Full black around widget */
         }
         .tradingview-widget-container {
             width: 400px;
             height: 600px;
-            background-color: #000;
-            overflow: hidden;
+            background-color: #000; /* Black background just around the widget */
         }
     </style>
 </head>
@@ -28,7 +31,7 @@
             "dateRange": "3M",
             "showChart": false,
             "locale": "en",
-            "isTransparent": false,
+            "isTransparent": true,
             "showSymbolLogo": true,
             "width": "400",
             "height": "600",
