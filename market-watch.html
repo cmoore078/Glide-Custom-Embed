@@ -8,12 +8,12 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #000; /* Ensure the background is black around the widget */
+            background-color: #000;
         }
         .tradingview-widget-container {
             width: 400px;
             height: 600px;
-            background-color: #000; /* Black background in container */
+            background-color: #000;
         }
     </style>
 </head>
@@ -28,7 +28,7 @@
             "showChart": false,
             "locale": "en",
             "largeChartUrl": "",
-            "isTransparent": false, /* Disable transparency */
+            "isTransparent": false,
             "showSymbolLogo": true,
             "showFloatingTooltip": false,
             "width": "400",
@@ -60,6 +60,15 @@
                         { "s": "NASDAQ:COIN" }
                     ],
                     "originalTitle": "Indices"
+                },
+                {
+                    "title": "Futures",
+                    "symbols": [
+                        { "s": "CME_MINI:ES1!", "d": "S&P 500" },
+                        { "s": "COMEX:GC1!", "d": "Gold" },
+                        { "s": "NYMEX:CL1!", "d": "WTI Crude Oil" }
+                    ],
+                    "originalTitle": "Futures"
                 }
             ]
         }
