@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TradingView Market Overview</title>
     <style>
-        /* Ensure widget container is black, allowing transparency within the widget */
+        /* Set container to remove excess space */
         body {
             margin: 0;
             padding: 0;
@@ -13,12 +13,17 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #000; /* Full black around widget */
+            background-color: #000;
+            overflow: hidden; /* Disable page scrolling */
         }
         .tradingview-widget-container {
-            width: 400px;
-            height: 600px;
-            background-color: #000; /* Black background just around the widget */
+            width: 100vw; /* Use full viewport width */
+            height: 100vh; /* Use full viewport height */
+            background-color: #000;
+            overflow: hidden; /* Prevent widget scrolling */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -33,8 +38,8 @@
             "locale": "en",
             "isTransparent": true,
             "showSymbolLogo": true,
-            "width": "400",
-            "height": "600",
+            "width": "100%",
+            "height": "100%",
             "tabs": [
                 {
                     "title": "Indices",
