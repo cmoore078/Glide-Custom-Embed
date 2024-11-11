@@ -3,35 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Sheets Embed</title>
+    <title>Custom Google Sheet Embed</title>
     <style>
-        /* Remove margins, padding, and border */
-        html, body {
+        /* Container to eliminate borders and extra space */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden; /* Ensures no scrolling within the container */
             margin: 0;
             padding: 0;
-            background-color: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            background-color: black; /* Set background to black to match app theme */
         }
-        .embed-container {
-            width: 100vw; /* Full viewport width */
-            height: 100vh; /* Full viewport height */
-            overflow: hidden;
-        }
+
+        /* Adjust iframe positioning to fully fit content and hide all scrolling */
         iframe {
-            border: none; /* Remove iframe border */
-            width: 100%;
-            height: 100%;
+            position: absolute;
+            top: -30px; /* Adjusts the top cropping */
+            left: -10px; /* Subtle left shift */
+            width: calc(100% + 20px); /* Slightly extend width */
+            height: calc(100% + 110px); /* Ensure height covers the bottom */
+            border: none;
+            overflow: hidden; /* Prevent any internal scrolling */
+            scrollbar-width: none; /* Hide scrollbar in Firefox */
+            pointer-events: none; /* Prevents scrolling and interaction within the iframe */
+        }
+
+        /* Hide scrollbar for iframe in WebKit browsers like Chrome, Safari */
+        iframe::-webkit-scrollbar {
+            display: none;
         }
     </style>
 </head>
-<body>
-    <div class="embed-container">
-        <!-- Embed Google Sheets content here -->
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRSzAAFCBHBEdCoCJVTx2TIzad5rsuRj7TIa4UToARd80kD0Va0qGNmnuMqCjJmrPJginycYeZnTasa/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" frameborder="0" scrolling="no"></iframe>
+<body style="margin: 0; padding: 0; overflow: hidden;">
+    <div class="iframe-container">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRSzAAFCBHBEdCoCJVTx2TIzad5rsuRj7TIa4UToARd80kD0Va0qGNmnuMqCjJmrPJginycYeZnTasa/pubhtml?gid=0&single=true"></iframe>
     </div>
 </body>
 </html>
