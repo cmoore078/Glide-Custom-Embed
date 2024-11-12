@@ -20,8 +20,6 @@
             width: 410px;
             height: 329px;
             overflow: hidden;
-            opacity: 0; /* Initial state for fade-in effect */
-            transition: opacity 1s ease-in-out; /* Animation transition */
         }
         iframe {
             border: none; /* Remove iframe border */
@@ -35,21 +33,5 @@
         <!-- Embed Google Sheets chart here -->
         <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSFBk24opyIZD8CYUTo0YCmtW50jYjrIyqXztD8P7VL7q-c9_kPvB-pNw9xQkttJk4SJggi1zhhIbji/pubchart?oid=760493524&amp;format=interactive" frameborder="0" scrolling="no"></iframe>
     </div>
-
-    <script>
-        // Create an IntersectionObserver to trigger animation when the chart is in view
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1; // Fade-in effect
-                    observer.unobserve(entry.target); // Stop observing after animation
-                }
-            });
-        }, { threshold: 0.5 }); // Trigger when 50% of the chart is in view
-
-        // Observe the chart container
-        const chartContainer = document.querySelector('.chart-container');
-        observer.observe(chartContainer);
-    </script>
 </body>
 </html>
